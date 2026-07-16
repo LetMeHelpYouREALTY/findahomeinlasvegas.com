@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     title: siteName,
     description: siteDescription,
     siteName,
-    images: [{ url: "/hero.png" }],
+    images: [{ url: "/realty/heroes/hero-home.png" }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteName,
     description: siteDescription,
-    images: ["/hero.png"],
+    images: ["/realty/heroes/hero-home.png"],
   },
   robots: {
     index: true,

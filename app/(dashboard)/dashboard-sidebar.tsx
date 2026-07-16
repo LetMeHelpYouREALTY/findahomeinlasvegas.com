@@ -100,7 +100,7 @@ export function DashboardSidebar({
         if (!res.ok) return;
         setSessionItems((prev) => prev.filter((s) => s.id !== sessionId));
         if (pathname === `/chat/${sessionId}`) {
-          router.push("/");
+          router.push("/agent");
         }
       } catch {
         // best effort
@@ -123,10 +123,10 @@ export function DashboardSidebar({
       <div className="flex flex-col gap-1 px-2 pt-2 pb-1">
         <div className="flex items-center justify-between px-2 py-1">
           <Link
-            href="/"
+            href="/agent"
             className="flex items-center"
             onClick={onNavigate}
-            aria-label="Home"
+            aria-label="Agent home"
           >
             <VercelIcon className="size-4" />
           </Link>
@@ -143,7 +143,7 @@ export function DashboardSidebar({
           )}
         </div>
         <Link
-          href="/"
+          href="/agent"
           onClick={onNavigate}
           className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-primary/10 hover:text-foreground"
         >

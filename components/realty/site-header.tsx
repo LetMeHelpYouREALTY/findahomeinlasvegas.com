@@ -16,7 +16,7 @@ export function RealtySiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link
-          href="/las-vegas-homes-for-sale"
+          href="/"
           className="flex items-center gap-2 text-foreground transition-colors hover:text-primary"
           aria-label={`${realtySiteConfig.agentName} — home`}
         >

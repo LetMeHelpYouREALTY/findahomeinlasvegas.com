@@ -11,6 +11,6 @@ export function getSiteUrl(): string {
   return FALLBACK_URL;
 }
 
-export const siteName = "Internal Knowledge Agent";
+export const siteName = "Find a Home in Las Vegas | Dr. Jan Duffy";
 export const siteDescription =
-  "Ask questions across your internal tools - GitHub, Notion, Slack, and more.";
+  "Search Las Vegas homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Live MLS listings, market data, and local guidance — call (702) 222-1964.";

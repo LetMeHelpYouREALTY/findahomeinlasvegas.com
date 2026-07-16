@@ -24,6 +24,7 @@ export const realtySiteConfig = {
 export const realtyNavLinks = [
   { label: "Homes for Sale", href: "/las-vegas-homes-for-sale" },
   { label: "Under $300K", href: "/las-vegas-homes-under-300000" },
+  { label: "Search", href: "/las-vegas-homes-search" },
   { label: "For Rent", href: "/las-vegas-homes-for-rent" },
   { label: "Pool Homes", href: "/las-vegas-homes-with-pool" },
   { label: "By Owner Guide", href: "/find-a-home-by-owner" },
