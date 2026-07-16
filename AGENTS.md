@@ -54,12 +54,15 @@ A Next.js 16 web UI for Anthropic's Managed Agents API. Users sign in with Verce
 | `BETTER_AUTH_URL` | Yes | Public origin (e.g. `http://localhost:3000`) |
 | `VERCEL_CLIENT_ID` | For OAuth | Vercel OAuth app client ID |
 | `VERCEL_CLIENT_SECRET` | For OAuth | Vercel OAuth app client secret |
+| `GOOGLE_SITE_VERIFICATION` | No | Google Search Console HTML-tag verification token (renders `<meta name="google-site-verification">`) |
 
 ## Project Structure
 
 ```
 app/
-  layout.tsx              Root layout (Geist fonts, ThemeProvider, dark mode)
+  layout.tsx              Root layout (Geist fonts, ThemeProvider, dark mode, SEO metadata)
+  robots.ts               robots.txt (only `/` indexable; /chat, /api, /auth disallowed)
+  sitemap.ts              sitemap.xml (public homepage only)
   error.tsx               Global error boundary
   not-found.tsx           404 page
   (dashboard)/
@@ -92,6 +95,7 @@ lib/
   anthropic.ts            Anthropic SDK client factory
   managed-agents.ts       Session creation + message sending helpers
   managed-agent-events.ts Event ID extraction, terminal detection, timestamp parsing
+  site.ts                 Canonical site URL + SEO metadata constants
   utils.ts                cn() utility
 
 components/

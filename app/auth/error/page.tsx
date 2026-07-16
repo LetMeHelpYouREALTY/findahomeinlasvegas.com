@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { AlertCircle } from "lucide-react";
 import { VercelIcon } from "@/components/icons";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 const ERROR_MESSAGES: Record<string, string> = {
   OAuthCallbackError: "The sign-in request was cancelled or expired. Please try again.",

@@ -60,6 +60,12 @@ Optional for GitHub integration:
 | `GITHUB_CLIENT_ID` | [Create a GitHub OAuth app](https://github.com/settings/applications/new) |
 | `GITHUB_CLIENT_SECRET` | From the same GitHub OAuth app |
 
+Optional for Google Search Console:
+
+| Variable | How to get it |
+| --- | --- |
+| `GOOGLE_SITE_VERIFICATION` | The verification token from the ["HTML tag" method](https://support.google.com/webmasters/answer/9008080) when adding the deployed URL as a property in [Search Console](https://search.google.com/search-console) — just the `content` value, not the full `<meta>` tag |
+
 ### 4. Install dependencies and push schema
 
 ```bash
@@ -86,6 +92,8 @@ pnpm dev
 | `lib/managed-agents.ts` | Session creation + message sending |
 | `app/workflows/tail-session.ts` | Durable workflow: polls Anthropic events, persists to Postgres |
 | `app/api/managed-agents/` | REST API routes (session, message, transcript) |
+| `app/robots.ts` / `app/sitemap.ts` | SEO — robots.txt and sitemap.xml (only the public `/` route is indexable) |
+| `lib/site.ts` | Canonical site URL + Google Search Console verification metadata |
 
 ## References
 
