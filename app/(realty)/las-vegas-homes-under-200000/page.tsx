@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RealtyHero } from "@/components/realty/hero-section";
+import { RealScoutOfficeListings } from "@/components/realty/office-listings";
 import { RealtyStatsBar } from "@/components/realty/stats-bar";
 import { RealtyContentLayout } from "@/components/realty/content-layout";
 import { RealtyFaqSection } from "@/components/realty/faq-section";
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     title: "Homes for Sale in Las Vegas Under $200,000",
     description:
       "A realistic look at what's available under $200,000 in the Las Vegas valley — mostly condos and manufactured homes.",
+    images: [{ url: "/realty/heroes/hero-under-200k.png" }],
   },
 };
 
@@ -65,6 +67,16 @@ export default function HomesUnder200kPage() {
       <RealtyHero
         headline="Homes for Sale in Las Vegas Under $200,000"
         subhead="A realistic look at what's available at this price point in 2026 — mostly condos, manufactured homes, and a small pocket of older detached homes."
+        imageSrc="/realty/heroes/hero-under-200k.png"
+        imageAlt="Compact entry-level Las Vegas home under a bright blue desert sky"
+      />
+
+      <RealScoutOfficeListings
+        title="Las Vegas Homes Under $200,000"
+        listingStatus="For Sale"
+        propertyTypes=",SFR,MF,TC,OTHER"
+        sortOrder="PRICE_LOW"
+        priceMax={200000}
       />
 
       <RealtyStatsBar

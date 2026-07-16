@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RealtyHero } from "@/components/realty/hero-section";
+import { RealScoutOfficeListings } from "@/components/realty/office-listings";
 import { RealtyStatsBar } from "@/components/realty/stats-bar";
 import { RealtyContentLayout } from "@/components/realty/content-layout";
 import { RealtyFaqSection } from "@/components/realty/faq-section";
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     title: "Homes for Sale in Las Vegas Under $300,000",
     description:
       "Condos, townhomes, and a limited number of single-family homes under $300,000 in the Las Vegas valley.",
+    images: [{ url: "/realty/heroes/hero-under-300k.png" }],
   },
 };
 
@@ -65,6 +67,16 @@ export default function HomesUnder300kPage() {
       <RealtyHero
         headline="Homes for Sale in Las Vegas Under $300,000"
         subhead="Condos, townhomes, and a limited number of single-family homes across North and East Las Vegas — with financing options that stretch further than you might expect."
+        imageSrc="/realty/heroes/hero-under-300k.png"
+        imageAlt="Affordable two-story townhomes in North Las Vegas under a clear desert sky"
+      />
+
+      <RealScoutOfficeListings
+        title="Las Vegas Homes Under $300,000"
+        listingStatus="For Sale"
+        propertyTypes=",SFR,MF,TC"
+        sortOrder="PRICE_LOW"
+        priceMax={300000}
       />
 
       <RealtyStatsBar

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RealtyHero } from "@/components/realty/hero-section";
+import { RealScoutOfficeListings } from "@/components/realty/office-listings";
 import { RealtyStatsBar } from "@/components/realty/stats-bar";
 import { RealtyContentLayout } from "@/components/realty/content-layout";
 import { RealtyFaqSection } from "@/components/realty/faq-section";
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     title: "Find a Home in Las Vegas by Owner (FSBO)",
     description:
       "What FSBO buyers and sellers need to know about Nevada disclosure law, financing, and when a licensed agent can help.",
+    images: [{ url: "/realty/heroes/hero-by-owner.png" }],
   },
 };
 
@@ -70,6 +72,15 @@ export default function FindAHomeByOwnerPage() {
         headline="Find a Home in Las Vegas by Owner"
         subhead="What to know about for-sale-by-owner listings in the Las Vegas valley — Nevada disclosure law, financing, and how to protect yourself whether you're buying FSBO or considering a licensed agent."
         primaryCtaLabel="Talk to a Local Agent First"
+        imageSrc="/realty/heroes/hero-by-owner.png"
+        imageAlt="Las Vegas ranch-style home with a yard sign in soft focus on a sunny desert day"
+      />
+
+      <RealScoutOfficeListings
+        title="Las Vegas Homes Currently Listed with Our Office"
+        listingStatus="For Sale"
+        propertyTypes=",SFR,MF,TC"
+        sortOrder="NEWEST"
       />
 
       <RealtyStatsBar

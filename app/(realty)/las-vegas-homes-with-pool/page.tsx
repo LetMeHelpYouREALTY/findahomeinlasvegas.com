@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RealtyHero } from "@/components/realty/hero-section";
+import { RealScoutOfficeListings } from "@/components/realty/office-listings";
 import { RealtyStatsBar } from "@/components/realty/stats-bar";
 import { RealtyContentLayout } from "@/components/realty/content-layout";
 import { RealtyFaqSection } from "@/components/realty/faq-section";
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     title: "Las Vegas Homes for Sale with a Pool",
     description:
       "Roughly 38% of Clark County single-family homes already have a pool — here's the price premium and real maintenance costs.",
+    images: [{ url: "/realty/heroes/hero-pool-homes.png" }],
   },
 };
 
@@ -64,6 +66,15 @@ export default function HomesWithPoolPage() {
       <RealtyHero
         headline="Las Vegas Homes for Sale with a Pool"
         subhead="With roughly 38% of Clark County single-family homes already pool-equipped, finding one is easy — knowing the real maintenance costs and HOA rules is what matters."
+        imageSrc="/realty/heroes/hero-pool-homes.png"
+        imageAlt="Private Las Vegas backyard swimming pool at sunset with desert mountains beyond"
+      />
+
+      <RealScoutOfficeListings
+        title="Las Vegas Homes for Sale — Browse Office Inventory"
+        listingStatus="For Sale"
+        propertyTypes=",SFR"
+        sortOrder="NEWEST"
       />
 
       <RealtyStatsBar

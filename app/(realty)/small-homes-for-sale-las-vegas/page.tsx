@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RealtyHero } from "@/components/realty/hero-section";
+import { RealScoutOfficeListings } from "@/components/realty/office-listings";
 import { RealtyStatsBar } from "@/components/realty/stats-bar";
 import { RealtyContentLayout } from "@/components/realty/content-layout";
 import { RealtyFaqSection } from "@/components/realty/faq-section";
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     title: "Small Homes for Sale in Las Vegas",
     description:
       "Starter homes and low-maintenance patio homes in the Las Vegas valley, with current price ranges by neighborhood.",
+    images: [{ url: "/realty/heroes/hero-small-homes.png" }],
   },
 };
 
@@ -64,6 +66,16 @@ export default function SmallHomesForSalePage() {
       <RealtyHero
         headline="Small Homes for Sale in Las Vegas"
         subhead="Starter homes for first-time buyers and low-maintenance patio homes for downsizers — with the neighborhoods and price ranges that fit each."
+        imageSrc="/realty/heroes/hero-small-homes.png"
+        imageAlt="Small single-story Las Vegas patio home with xeriscape landscaping and mountain views"
+      />
+
+      <RealScoutOfficeListings
+        title="Small & Starter Homes for Sale in Las Vegas"
+        listingStatus="For Sale"
+        propertyTypes=",SFR,MF,TC"
+        sortOrder="PRICE_LOW"
+        priceMax={450000}
       />
 
       <RealtyStatsBar

@@ -153,3 +153,12 @@
   -webkit-text-fill-color: transparent;
   animation: shimmer 2.5s ease-in-out infinite;
 }
+/* RealScout office-listings host — give the custom element room to expand */
+.realscout-office-listings-host {
+  width: 100%;
+}
+
+.realscout-office-listings-host realscout-office-listings {
+  display: block;
+  width: 100%;
+}

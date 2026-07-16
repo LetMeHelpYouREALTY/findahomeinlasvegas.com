@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RealtyHero } from "@/components/realty/hero-section";
+import { RealScoutOfficeListings } from "@/components/realty/office-listings";
 import { RealtyStatsBar } from "@/components/realty/stats-bar";
 import { RealtyContentLayout } from "@/components/realty/content-layout";
 import { RealtyFaqSection } from "@/components/realty/faq-section";
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     title: "Homes for Sale in Las Vegas, NV | Current Listings & Market Data",
     description:
       "Browse homes for sale in Las Vegas, NV with up-to-date market data on price, inventory, and days on market.",
+    images: [{ url: "/realty/heroes/hero-homes-for-sale.png" }],
   },
 };
 
@@ -64,6 +66,15 @@ export default function LasVegasHomesForSalePage() {
       <RealtyHero
         headline="Homes for Sale in Las Vegas, NV"
         subhead="A local, licensed guide to buying in the Las Vegas Valley — with current market data across every submarket, from Summerlin to Henderson to North Las Vegas."
+        imageSrc="/realty/heroes/hero-homes-for-sale.png"
+        imageAlt="Modern Las Vegas single-family home at golden hour with desert mountains in the background"
+      />
+
+      <RealScoutOfficeListings
+        title="Current Homes for Sale in Las Vegas"
+        listingStatus="For Sale"
+        propertyTypes=",SFR,MF,TC"
+        sortOrder="NEWEST"
       />
 
       <RealtyStatsBar

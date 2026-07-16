@@ -116,17 +116,19 @@ specific high-intent keywords:
 | `/las-vegas-homes-with-pool` | Las Vegas homes for sale with pool |
 
 Each page ships with `RealEstateAgent` + `BreadcrumbList` + `FAQPage` JSON-LD,
-an Equal Housing Opportunity notice, and market data sourced from deep
-research (see citations in each page's fine print) rather than fabricated
-listings — there is no live MLS/IDX feed wired up yet. Before launch:
+an Equal Housing Opportunity notice, a unique full-bleed hero image, and a
+live RealScout **office listings** widget (`agent-encoded-id=QWdlbnQtMjI1MDUw`)
+placed directly below the hero. The RealScout script loads once in
+`app/(realty)/layout.tsx`; CSP in `next.config.ts` allows `em.realscout.com`
+and `www.realscout.com`. Market copy is sourced from deep research (see
+citations in each page's fine print). Before launch:
 
 - Fill in `streetAddress`/`postalCode` in `lib/realty/site-config.ts` once
   known, keeping it in exact sync with the Google Business Profile listing.
   Do not fabricate an address.
-- Wire the "View Current Listings" / listings CTAs to a real IDX/MLS or
-  RealScout feed once credentials are available.
 - Re-verify all market statistics against current MLS data before publishing
   — the figures on these pages are dated (mid-2026) and will go stale.
+- Confirm the RealScout agent-encoded-id still matches the live office account.
 
 ## References
 

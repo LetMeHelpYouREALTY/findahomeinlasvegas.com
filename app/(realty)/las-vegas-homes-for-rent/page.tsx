@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RealtyHero } from "@/components/realty/hero-section";
+import { RealScoutOfficeListings } from "@/components/realty/office-listings";
 import { RealtyStatsBar } from "@/components/realty/stats-bar";
 import { RealtyContentLayout } from "@/components/realty/content-layout";
 import { RealtyFaqSection } from "@/components/realty/faq-section";
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     title: "Las Vegas Homes for Rent",
     description:
       "Current rent ranges by Las Vegas neighborhood, plus honest guidance on renting vs. buying.",
+    images: [{ url: "/realty/heroes/hero-for-rent.png" }],
   },
 };
 
@@ -64,6 +66,15 @@ export default function LasVegasHomesForRentPage() {
       <RealtyHero
         headline="Las Vegas Homes for Rent"
         subhead="Current rent ranges by neighborhood, from North Las Vegas to Summerlin West — plus honest guidance on renting vs. buying in today's market."
+        imageSrc="/realty/heroes/hero-for-rent.png"
+        imageAlt="Furnished Las Vegas rental living room opening onto a sunny desert patio"
+      />
+
+      <RealScoutOfficeListings
+        title="Las Vegas Homes Currently Available for Rent"
+        listingStatus="For Rent"
+        propertyTypes=",SFR,MF,TC"
+        sortOrder="NEWEST"
       />
 
       <RealtyStatsBar

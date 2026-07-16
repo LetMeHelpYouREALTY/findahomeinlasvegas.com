@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RealtyHero } from "@/components/realty/hero-section";
+import { RealScoutOfficeListings } from "@/components/realty/office-listings";
 import { RealtyStatsBar } from "@/components/realty/stats-bar";
 import { RealtyContentLayout } from "@/components/realty/content-layout";
 import { RealtyFaqSection } from "@/components/realty/faq-section";
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     title: "Las Vegas Homes for Sale — Map Search, Photos & Price History",
     description:
       "Search Las Vegas homes for sale with an interactive map, photos, and price history — backed by a local licensed agent.",
+    images: [{ url: "/realty/heroes/hero-homes-search.png" }],
   },
 };
 
@@ -66,6 +68,15 @@ export default function LasVegasHomesSearchPage() {
         headline="Search Las Vegas Homes for Sale"
         subhead="An interactive map, real photos, price history, and school data — the search experience you'd expect from a major portal, backed by a licensed local agent who can act fast."
         primaryCtaLabel="Get Matched With Current Listings"
+        imageSrc="/realty/heroes/hero-homes-search.png"
+        imageAlt="Homebuyer reviewing Las Vegas home listings on a laptop in a bright modern kitchen"
+      />
+
+      <RealScoutOfficeListings
+        title="Search Las Vegas Homes — Live Office Listings"
+        listingStatus="For Sale"
+        propertyTypes=",SFR,MF,TC"
+        sortOrder="NEWEST"
       />
 
       <RealtyStatsBar
