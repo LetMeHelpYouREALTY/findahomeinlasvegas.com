@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -27,24 +28,35 @@ export function RealtyFooterCta() {
       <div className="w-full border-y border-border bg-card/40">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
           <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary">
-                Ready to Make Your Move?
-              </p>
-              <h2 className="mt-2 text-balance text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Talk to {realtySiteConfig.agentName} Today
-              </h2>
-              <p className="mt-2 max-w-md text-pretty text-sm text-muted-foreground">
-                Whether you&apos;re buying, selling, or just exploring the Las
-                Vegas market, a quick call is the best first step.
-              </p>
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start sm:gap-5">
+              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full border-[3px] border-primary">
+                <Image
+                  src={realtySiteConfig.agentPhotoSrc}
+                  alt={realtySiteConfig.agentPhotoAlt}
+                  fill
+                  sizes="80px"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+                  Ready to Make Your Move?
+                </p>
+                <h2 className="mt-2 text-balance text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                  Talk to {realtySiteConfig.agentName} Today
+                </h2>
+                <p className="mt-2 max-w-md text-pretty text-sm text-muted-foreground">
+                  Whether you&apos;re buying, selling, or just exploring the Las
+                  Vegas market, a quick call is the best first step.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-col items-center gap-3 sm:items-end">
               <Button
                 render={<a href={`tel:${realtySiteConfig.phoneHref}`} />}
                 size="lg"
-                className="gap-2 bg-primary px-8 text-base font-semibold text-primary-foreground hover:bg-primary/90"
+                className="cursor-pointer gap-2 bg-primary px-8 text-base font-semibold text-primary-foreground hover:bg-primary/90"
               >
                 <Phone className="h-5 w-5" aria-hidden="true" />
                 {realtySiteConfig.phoneDisplay}

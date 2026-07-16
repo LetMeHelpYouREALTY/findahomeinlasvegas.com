@@ -14,6 +14,10 @@ export const realtySiteConfig = {
   licenseNumber: "S.0197614.LLC",
   phoneDisplay: "(702) 222-1964",
   phoneHref: "+17022221964",
+  /** Circular brand headshot used in agent card, schema, and OG fallbacks */
+  agentPhotoSrc: "/realty/dr-jan-duffy.jpg",
+  agentPhotoAlt:
+    "Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices Nevada Properties",
   city: "Las Vegas",
   state: "NV",
   region: "Greater Las Vegas Valley",

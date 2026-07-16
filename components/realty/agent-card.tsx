@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -5,16 +6,18 @@ import { Separator } from "@/components/ui/separator";
 import { realtySiteConfig } from "@/lib/realty/site-config";
 
 export function RealtyAgentCard() {
-  const initials = realtySiteConfig.agentName
-    .split(" ")
-    .map((part) => part[0])
-    .join("");
-
   return (
     <Card className="border-border bg-card shadow-none">
       <CardHeader className="pb-0">
-        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border-2 border-primary/40 bg-muted text-3xl font-bold text-primary">
-          {initials}
+        <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full border-[3px] border-primary shadow-sm">
+          <Image
+            src={realtySiteConfig.agentPhotoSrc}
+            alt={realtySiteConfig.agentPhotoAlt}
+            fill
+            sizes="112px"
+            className="object-cover"
+            priority
+          />
         </div>
         <div className="mt-3 text-center">
           <p className="text-base font-semibold text-foreground">
@@ -37,7 +40,7 @@ export function RealtyAgentCard() {
         </a>
         <Button
           render={<a href={`tel:${realtySiteConfig.phoneHref}`} />}
-          className="mt-1 w-full bg-primary font-semibold text-primary-foreground hover:bg-primary/90"
+          className="mt-1 w-full cursor-pointer bg-primary font-semibold text-primary-foreground hover:bg-primary/90"
         >
           Call {realtySiteConfig.agentName.split(" ")[0]}
         </Button>

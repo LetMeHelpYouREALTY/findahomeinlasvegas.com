@@ -2,13 +2,15 @@ import { realtySiteConfig } from "@/lib/realty/site-config";
 import { getSiteUrl } from "@/lib/site";
 
 export function realEstateAgentSchema() {
+  const siteUrl = getSiteUrl();
   return {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     name: realtySiteConfig.agentName,
     jobTitle: realtySiteConfig.agentTitle,
     telephone: realtySiteConfig.phoneDisplay,
-    url: getSiteUrl(),
+    url: siteUrl,
+    image: `${siteUrl}${realtySiteConfig.agentPhotoSrc}`,
     areaServed: {
       "@type": "City",
       name: `${realtySiteConfig.city}, ${realtySiteConfig.state}`,
