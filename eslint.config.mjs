@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Scratch research/generation output, not part of the app:
+    ".research/**",
   ]),
 ]);
 

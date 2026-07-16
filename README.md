@@ -92,8 +92,41 @@ pnpm dev
 | `lib/managed-agents.ts` | Session creation + message sending |
 | `app/workflows/tail-session.ts` | Durable workflow: polls Anthropic events, persists to Postgres |
 | `app/api/managed-agents/` | REST API routes (session, message, transcript) |
-| `app/robots.ts` / `app/sitemap.ts` | SEO — robots.txt and sitemap.xml (only the public `/` route is indexable) |
+| `app/robots.ts` / `app/sitemap.ts` | SEO — robots.txt and sitemap.xml |
 | `lib/site.ts` | Canonical site URL + Google Search Console verification metadata |
+| `app/(realty)/` | Las Vegas real estate SEO landing pages (see below) — separate from the agent dashboard |
+| `lib/realty/` | NAP/brand config (`site-config.ts`) and JSON-LD schema helpers (`schema.tsx`) for the realty pages |
+| `components/realty/` | Shared header/hero/stats/FAQ/footer components for the realty pages |
+
+## Las Vegas real estate landing pages (`app/(realty)/`)
+
+Alongside the agent dashboard, this repo also hosts a set of standalone,
+public SEO landing pages for a Las Vegas real estate agent, targeting
+specific high-intent keywords:
+
+| Route | Target keyword |
+| --- | --- |
+| `/las-vegas-homes-for-sale` | Home for sale in Las Vegas (head term / hub page) |
+| `/las-vegas-homes-search` | Las Vegas homes for sale zillow (search-experience intent) |
+| `/find-a-home-by-owner` | Find a home in Las Vegas by owner (FSBO) |
+| `/las-vegas-homes-under-300000` | Homes for sale in Las Vegas under $300,000 |
+| `/las-vegas-homes-under-200000` | Homes for sale in Las Vegas under $200,000 |
+| `/las-vegas-homes-for-rent` | Las Vegas homes for rent |
+| `/small-homes-for-sale-las-vegas` | Small homes for sale in Las Vegas |
+| `/las-vegas-homes-with-pool` | Las Vegas homes for sale with pool |
+
+Each page ships with `RealEstateAgent` + `BreadcrumbList` + `FAQPage` JSON-LD,
+an Equal Housing Opportunity notice, and market data sourced from deep
+research (see citations in each page's fine print) rather than fabricated
+listings — there is no live MLS/IDX feed wired up yet. Before launch:
+
+- Fill in `streetAddress`/`postalCode` in `lib/realty/site-config.ts` once
+  known, keeping it in exact sync with the Google Business Profile listing.
+  Do not fabricate an address.
+- Wire the "View Current Listings" / listings CTAs to a real IDX/MLS or
+  RealScout feed once credentials are available.
+- Re-verify all market statistics against current MLS data before publishing
+  — the figures on these pages are dated (mid-2026) and will go stale.
 
 ## References
 

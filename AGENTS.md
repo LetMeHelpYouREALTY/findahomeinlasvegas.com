@@ -31,6 +31,17 @@ A Next.js 16 web UI for Anthropic's Managed Agents API. Users sign in with Verce
 | [docs/UI_CONVENTIONS.md](docs/UI_CONVENTIONS.md) | Component patterns, shadcn/base-ui gotchas, layout rules |
 | [docs/streaming-long-running-agents.md](docs/streaming-long-running-agents.md) | Architecture essay: streaming vs persistence patterns for long-running agents |
 
+## Note: additional real estate landing pages
+
+This repo also hosts a separate, unrelated set of public SEO landing pages
+for a Las Vegas real estate agent under `app/(realty)/` (with shared
+components in `components/realty/` and config in `lib/realty/`). They do not
+use the Anthropic/Workflow/auth stack described below — see the "Las Vegas
+real estate landing pages" section in `README.md` for details. Do not assume
+routes outside `app/(realty)/` relate to real estate, and do not assume
+`app/(realty)/` pages follow the Managed Agents architecture described in
+this file.
+
 ## Key Constraints
 
 1. **pnpm only** - run `pnpm install`, `pnpm add`, `pnpm dev`, etc.

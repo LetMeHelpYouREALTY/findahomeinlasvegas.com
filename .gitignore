@@ -41,3 +41,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+
+# scratch research output (deep-research runs, V0 generations)
+/.research/
