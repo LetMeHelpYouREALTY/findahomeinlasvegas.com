@@ -7,12 +7,12 @@ const realScoutImgSrc = "https://em.realscout.com https://www.realscout.com http
 
 const contentSecurityPolicy = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${realScoutScriptSrc} https://va.vercel-scripts.com`,
-  `connect-src 'self' ${realScoutConnectSrc} https://vitals.vercel-insights.com`,
-  `img-src 'self' data: blob: https: ${realScoutImgSrc}`,
+  `script-src https://widgetbe.com https://*.widgetbe.com 'self' 'unsafe-inline' 'unsafe-eval' ${realScoutScriptSrc} https://va.vercel-scripts.com`,
+  `connect-src https://widgetbe.com https://*.widgetbe.com 'self' ${realScoutConnectSrc} https://vitals.vercel-insights.com`,
+  `img-src https://widgetbe.com https://*.widgetbe.com 'self' data: blob: https: ${realScoutImgSrc}`,
   "style-src 'self' 'unsafe-inline'",
   "font-src 'self' data:",
-  "frame-src 'self' https://em.realscout.com https://www.realscout.com",
+  "frame-src https://widgetbe.com https://*.widgetbe.com 'self' https://em.realscout.com https://www.realscout.com",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
