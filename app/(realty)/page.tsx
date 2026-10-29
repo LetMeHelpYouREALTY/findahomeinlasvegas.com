@@ -12,6 +12,7 @@ import {
   realEstateAgentSchema,
 } from "@/lib/realty/schema";
 import { realtySiteConfig } from "@/lib/realty/site-config";
+import FeaturedListing from "@/components/sections/FeaturedListing";
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
       "Find a Home in Las Vegas, NV | Dr. Jan Duffy, REALTOR®",
   },
   description:
-    "Search Las Vegas homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Live MLS listings, market data, and local guidance across the valley — call (702) 222-1964.",
+    "Search Las Vegas homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Live MLS listings, market data, and local guidance across the valley — call (702) 357-4723.",
   alternates: { canonical: "/" },
   openGraph: {
     url: "/",
@@ -39,7 +40,7 @@ const faqs = [
   {
     question: "How do I search homes for sale in Las Vegas?",
     answer:
-      "Use the live listings below to browse active inventory, or call (702) 222-1964 for a guided search by budget, location, and home type. You can also explore focused pages for homes under $300K, pool homes, rentals, and more.",
+      "Use the live listings below to browse active inventory, or call (702) 357-4723 for a guided search by budget, location, and home type. You can also explore focused pages for homes under $300K, pool homes, rentals, and more.",
   },
   {
     question: "What areas of Las Vegas do you cover?",
@@ -49,7 +50,7 @@ const faqs = [
   {
     question: "Is there a cost for a consultation?",
     answer:
-      "An initial buyer or seller consultation is free and no-obligation. Call (702) 222-1964 to schedule a time that works for you.",
+      "An initial buyer or seller consultation is free and no-obligation. Call (702) 357-4723 to schedule a time that works for you.",
   },
 ];
 
@@ -101,6 +102,12 @@ export default function RealtyHomePage() {
         imageAlt="Modern Las Vegas desert home at dusk with lit windows and a pool reflecting the sunset"
       />
 
+      <FeaturedListing
+        phone="(702) 357-4723"
+        phoneHref="tel:+17023574723"
+        siteHost="findahomeinlasvegas.com"
+      />
+
       <RealScoutOfficeListings
         title="Live Las Vegas Homes for Sale"
         listingStatus="For Sale"
@@ -126,7 +133,7 @@ export default function RealtyHomePage() {
             note: "GLVAR, Apr. 2026",
           },
           {
-            value: "(702) 222-1964",
+            value: "(702) 357-4723",
             label: "Call Dr. Jan Duffy",
             note: "Free consultation",
           },
