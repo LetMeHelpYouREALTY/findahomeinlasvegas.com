@@ -12,6 +12,7 @@ import {
   realEstateAgentSchema,
 } from "@/lib/realty/schema";
 import { realtySiteConfig } from "@/lib/realty/site-config";
+import FeaturedListing from "@/components/sections/FeaturedListing";
 
 export const metadata: Metadata = {
   title: {
@@ -99,6 +100,12 @@ export default function RealtyHomePage() {
         primaryCtaHref="#listings"
         imageSrc="/realty/heroes/hero-home.png"
         imageAlt="Modern Las Vegas desert home at dusk with lit windows and a pool reflecting the sunset"
+      />
+
+      <FeaturedListing
+        phone="(702) 357-4723"
+        phoneHref="tel:+17023574723"
+        siteHost="findahomeinlasvegas.com"
       />
 
       <RealScoutOfficeListings
