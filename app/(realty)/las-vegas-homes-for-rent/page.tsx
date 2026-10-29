@@ -117,7 +117,7 @@ export default function LasVegasHomesForRentPage() {
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">
           <strong className="text-foreground">Summerlin, Henderson,
           Paradise/Chinatown, and Skye Canyon</strong> each offer a different
-          profile — family-oriented schools, Strip walkability, or newer
+          profile — schools, Strip walkability, or newer
           affordable inventory — worth comparing against your specific
           priorities.
         </p>

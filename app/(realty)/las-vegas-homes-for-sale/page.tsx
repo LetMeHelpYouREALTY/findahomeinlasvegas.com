@@ -118,7 +118,7 @@ export default function LasVegasHomesForSalePage() {
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">
           <strong className="text-foreground">Henderson</strong> trades
           around $50,000 above the valley median, with strong demand for its
-          family-oriented communities and consistent appreciation.
+          communities and consistent appreciation.
         </p>
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">
           <strong className="text-foreground">North Las Vegas</strong> is
