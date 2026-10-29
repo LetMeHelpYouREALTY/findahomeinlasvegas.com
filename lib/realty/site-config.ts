@@ -12,8 +12,8 @@ export const realtySiteConfig = {
   agentTitle: "REALTOR® | BHHS Nevada Properties",
   brokerage: "Berkshire Hathaway HomeServices Nevada Properties",
   licenseNumber: "S.0197614.LLC",
-  phoneDisplay: "(702) 222-1964",
-  phoneHref: "+17022221964",
+  phoneDisplay: "(702) 357-4723",
+  phoneHref: "+17023574723",
   /** Circular brand headshot used in agent card, schema, and OG fallbacks */
   agentPhotoSrc: "/realty/dr-jan-duffy.jpg",
   agentPhotoAlt:
