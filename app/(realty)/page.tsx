@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       "Find a Home in Las Vegas, NV | Dr. Jan Duffy, REALTOR®",
   },
   description:
-    "Search Las Vegas homes for sale with Dr. Jan Duffy, BHHS Nevada Properties. Live MLS listings, market data, and local guidance across the valley — call (702) 357-4723.",
+    "Search Las Vegas homes for sale with Dr. Jan Duffy, REALTOR®. Live MLS listings, market data, and local guidance across the valley — call (702) 357-4723.",
   alternates: { canonical: "/" },
   openGraph: {
     url: "/",
@@ -35,7 +35,7 @@ const faqs = [
   {
     question: "Who is Dr. Jan Duffy?",
     answer:
-      "Dr. Jan Duffy is a licensed Nevada REALTOR® (S.0197614.LLC) with Berkshire Hathaway HomeServices Nevada Properties. She helps buyers and sellers navigate Las Vegas Valley submarkets with current MLS data and clear next steps.",
+      "Dr. Jan Duffy is a Nevada REALTOR® licensed since 2008 · 35 years in Las Vegas. She helps buyers and sellers navigate Las Vegas Valley submarkets with current MLS data and clear next steps.",
   },
   {
     question: "How do I search homes for sale in Las Vegas?",
@@ -95,7 +95,7 @@ export default function RealtyHomePage() {
 
       <RealtyHero
         headline={`Find a Home in Las Vegas with ${realtySiteConfig.agentName}`}
-        subhead="Local MLS search, clear market data, and hands-on guidance from a BHHS Nevada Properties REALTOR® — serving buyers and sellers across the Las Vegas Valley."
+        subhead="Local MLS search, clear market data, and hands-on guidance from a local REALTOR® — serving buyers and sellers across the Las Vegas Valley."
         primaryCtaLabel="Browse Live Listings"
         primaryCtaHref="#listings"
         imageSrc="/realty/heroes/hero-home.png"

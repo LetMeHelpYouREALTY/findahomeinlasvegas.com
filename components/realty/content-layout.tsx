@@ -20,8 +20,7 @@ export function RealtyContentLayout({
                   Licensed in Nevada
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  NV Lic. #{realtySiteConfig.licenseNumber} · Brokered by{" "}
-                  {realtySiteConfig.brokerage}
+                  Licensed since 2008 · 35 years in Las Vegas
                 </p>
               </div>
             </div>
