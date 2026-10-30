@@ -10,7 +10,7 @@ import {
  */
 export function RealScoutOfficeListings({
   title = "Current Office Listings",
-  subtitle = "Live MLS inventory from Berkshire Hathaway HomeServices Nevada Properties — updated throughout the day.",
+  subtitle = "Live office MLS inventory — updated throughout the day.",
   ...filters
 }: RealScoutOfficeListingsProps & {
   title?: string;

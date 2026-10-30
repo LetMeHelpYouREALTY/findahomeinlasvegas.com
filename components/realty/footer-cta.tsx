@@ -71,11 +71,12 @@ export function RealtyFooterCta() {
           <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
             <div className="flex flex-col gap-1">
               <p className="text-sm font-semibold text-foreground">
-                {realtySiteConfig.agentName} · {realtySiteConfig.brokerage}
+                {realtySiteConfig.agentName}, REALTOR®
               </p>
               <p className="text-xs text-muted-foreground">
-                &copy; {currentYear} {realtySiteConfig.agentName} · NV Lic. #
-                {realtySiteConfig.licenseNumber} · {realtySiteConfig.city},{" "}
+                &copy; {currentYear} {realtySiteConfig.agentName} · Berkshire
+                Hathaway HomeServices Nevada Properties since September 2008 ·
+                License S.0197614.LLC · {realtySiteConfig.city},{" "}
                 {realtySiteConfig.state}
               </p>
             </div>

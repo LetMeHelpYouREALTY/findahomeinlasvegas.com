@@ -9,7 +9,7 @@
  */
 export const realtySiteConfig = {
   agentName: "Dr. Jan Duffy",
-  agentTitle: "REALTOR® | BHHS Nevada Properties",
+  agentTitle: "REALTOR® | Licensed since 2008",
   brokerage: "Berkshire Hathaway HomeServices Nevada Properties",
   licenseNumber: "S.0197614.LLC",
   phoneDisplay: "(702) 357-4723",
@@ -17,7 +17,7 @@ export const realtySiteConfig = {
   /** Circular brand headshot used in agent card, schema, and OG fallbacks */
   agentPhotoSrc: "/realty/dr-jan-duffy.jpg",
   agentPhotoAlt:
-    "Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices Nevada Properties",
+    "Dr. Jan Duffy, REALTOR®",
   city: "Las Vegas",
   state: "NV",
   region: "Greater Las Vegas Valley",
