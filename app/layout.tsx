@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import RealtorAnalytics from "../components/analytics/RealtorAnalytics";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -73,6 +74,7 @@ export default function RootLayout({
           <main>{children}</main>
         </ThemeProvider>
         <Analytics />
+        <RealtorAnalytics siteName="findahomeinlasvegas.com" />
       </body>
     </html>
   );
